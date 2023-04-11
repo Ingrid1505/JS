@@ -20,6 +20,7 @@
         var canvas = document.getElementById("myCanvas");
         var context = canvas.getContext("2d");
         var radius = 10;
+        var game;
         const PLAYER_HEIGHT = 100;
         const PLAYER_WIDTH = 5;
         var vx=1;
@@ -55,12 +56,23 @@
         //premeier appel de la fonction
         requestAnimationFrame(draw);
 
-
-        canvas.addEventListener('mousemove')
-        function play(event){
-
+        document.addEventListener('DOMContentLoaded', function () {
+    canvas = document.getElementById('canvas');
+    game = {
+        player: {
+            y: canvas.height / 2 - PLAYER_HEIGHT / 2
+        },
+        computer: {
+            y: canvas.height / 2 - PLAYER_HEIGHT / 2
+        },
+        ball: {
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            r: 5
         }
-        
+    }
+    draw();
+});
 
     </script>
 </body>
