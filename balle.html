@@ -56,48 +56,7 @@
         //premeier appel de la fonction
         requestAnimationFrame(draw);
 
-        document.addEventListener('DOMContentLoaded', function () {
-    canvas = document.getElementById('canvas');
-    game = {
-        player: {
-            y: canvas.height / 2 - PLAYER_HEIGHT / 2
-        },
-        computer: {
-            y: canvas.height / 2 - PLAYER_HEIGHT / 2
-        },
-        ball: {
-            x: canvas.width / 2,
-            y: canvas.height / 2,
-            r: 5
-        }
-    }
-    draw();
-    game = {
-        player: {
-            y: canvas.height / 2 - PLAYER_HEIGHT / 2
-        },
-        computer: {
-            y: canvas.height / 2 - PLAYER_HEIGHT / 2
-        },
-        ball: {
-            x: canvas.width / 2,
-            y: canvas.height / 2,
-            r: 5,
-            speed: {
-                x: 2,
-                y: 2
-            }
-        }
-    }
-    function play() {
-    game.ball.x += game.ball.speed.x;
-    game.ball.y += game.ball.speed.y;
-    draw();
-    requestAnimationFrame(play);
-}
-});
-play();
-
+       
     </script>
 </body>
 </html>
