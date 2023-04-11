@@ -88,13 +88,15 @@
                 y: 2
             }
         }
-    }function play() {
+    }
+    function play() {
     game.ball.x += game.ball.speed.x;
     game.ball.y += game.ball.speed.y;
     draw();
     requestAnimationFrame(play);
 }
 });
+play();
 
     </script>
 </body>
