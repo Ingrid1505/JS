@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" style="border:5px black solid ;"width="500" height="500"></canvas>
+    <script>
+        
+        var x=20;
+        var y=170;
+        var x1=450;
+        var y1=50;
+        var x2=50;
+        var y2=50;
+        var x2=50;
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        var radius = 10;
+        
+        var vx=1;
+        var vy=1;
+
+        function draw() {
+        
+        //permet de supprimer les éléments existants dans le canvas
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        
+        //redessine le cercle rouge
+        context.beginPath();
+        context.arc(x, y, radius, 0, 2 * Math.PI);
+        context.fill();
+        context.fillRect(x1, y1,15,150);
+        context.fillRect(x2, y1 ,15,150);
+        context.fillStyle = "black";
+        
+      
+
+        if(x>canvas.width-radius || x<0){
+            vx=-vx;
+        }
+
+       if(y>canvas.height-radius || y<0)
+        {vy=-vy;} 
+        
+        x=x+vx;
+        y=y+vy;
+        //permet d'appeler la fonction indéfiniement
+        requestAnimationFrame(draw);
+        }
+        //premeier appel de la fonction
+        requestAnimationFrame(draw);
+
+
+        canvas.addEventListener('mousemove')
+        function play(event){
+
+        }
+        
+
+    </script>
+</body>
+</html>
