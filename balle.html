@@ -12,10 +12,10 @@
         
         var x=20;
         var y=170;
-        var x1=1450;
-        var y1=250;
-        var x2=50;
-        var y2=250;
+        var x1=50;
+        var y1=50;
+        var x2=450;
+        var y2=50;
         var canvas = document.getElementById("myCanvas");
         var context = canvas.getContext("2d");
         var radius = 10;
@@ -33,7 +33,11 @@
         context.arc(x, y, radius, 0, 2 * Math.PI);
         context.fill();
         raq1=context.fillRect(x1, y1,15,150);
-       raq2= context.fillRect(x2, y1 ,15,150);
+       raq2= context.fillRect(x2, y2 ,15,150);
+       context.beginPath();
+       context.moveTo(canvas.height,0);
+       context.lineTo(50,9150);
+       context.stroke();
         context.fillStyle = "black";
         
       
