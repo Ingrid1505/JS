@@ -7,22 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <canvas id="myCanvas" style="border:5px black solid ;"width="500" height="500"></canvas>
+    <canvas id="myCanvas" style="border:5px black solid ;"width="1500" height="700"></canvas>
     <script>
         
         var x=20;
         var y=170;
-        var x1=450;
-        var y1=50;
+        var x1=1450;
+        var y1=250;
         var x2=50;
-        var y2=50;
-        var x2=50;
+        var y2=250;
         var canvas = document.getElementById("myCanvas");
         var context = canvas.getContext("2d");
         var radius = 10;
         var vx=1;
         var vy=1;
-
+        var raq1;
+        var raq2;
         function draw() {
         
         //permet de supprimer les éléments existants dans le canvas
@@ -32,8 +32,8 @@
         context.beginPath();
         context.arc(x, y, radius, 0, 2 * Math.PI);
         context.fill();
-        context.fillRect(x1, y1,15,150);
-        context.fillRect(x2, y1 ,15,150);
+        raq1=context.fillRect(x1, y1,15,150);
+       raq2= context.fillRect(x2, y1 ,15,150);
         context.fillStyle = "black";
         
       
@@ -44,7 +44,14 @@
 
        if(y>canvas.height-radius || y<0)
         {vy=-vy;} 
-        
+        x=x+vx;
+        y=y+vy;
+        if(x>raq1 || x<0){
+            vx=-vx;
+        }
+        if(x>raq2 || x<0){
+            vx=-vx;
+        }
         x=x+vx;
         y=y+vy;
         //permet d'appeler la fonction indéfiniement
