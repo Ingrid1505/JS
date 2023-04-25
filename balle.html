@@ -28,18 +28,15 @@
        document.addEventListener("keydown", function(event) {
         if(event.key == "ArrowDown") {
             console.log(event)
+            y1=y1+50;
             
 
         } else if (event.key == "ArrowUp"){
             console.log(event)
+            y1=y1-50;
             
         }
-        if (event.key == "ArrowDown"){
-        y1=y1+50;
-        }
-    else if (event.key == "Arrowup"){
-        y1=y1-50;
-    }
+
        })
    
         function draw() {
