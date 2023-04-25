@@ -34,13 +34,14 @@
             console.log(event)
             
         }
-       })
-    if (event.key == "ArrowDown"){
-        y1=y1-1;
+        if (event.key == "ArrowDown"){
+        y1=y1+50;
         }
     else if (event.key == "Arrowup"){
-        y1=y1+1;
+        y1=y1-50;
     }
+       })
+   
         function draw() {
         
         //permet de supprimer les éléments existants dans le canvas
@@ -73,10 +74,10 @@
         x=x+vx;
         y=y+vy;
         //permet d'appeler la fonction indéfiniement
-        //requestAnimationFrame(draw);
+        requestAnimationFrame(draw);
         }
         //premeier appel de la fonction
-        //requestAnimationFrame(draw);
+        requestAnimationFrame(draw);
         draw()
 
        
