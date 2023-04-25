@@ -12,9 +12,9 @@
         
         var x=20;
         var y=170;
-        var x1=50;
+        var x1=0;
         var y1=50;
-        var x2=1300;
+        var x2=1485;
         var y2=50;
         var canvas = document.getElementById("myCanvas");
         var context = canvas.getContext("2d");
@@ -29,12 +29,12 @@
         if(event.key == "ArrowDown") {
             console.log(event)
             y1=y1+50;
-            
+            y2=y2+50;
 
         } else if (event.key == "ArrowUp"){
             console.log(event)
             y1=y1-50;
-            
+            y2=y2-50;
         }
 
        })
@@ -59,13 +59,13 @@
         }
 
        if(y>canvas.height-radius || y<0)
-        {vy=-vy;} 
-        x=x+vx;
-        y=y+vy;
-        if(x>raq1 || x<0){
+        {vy=-vy;}
+        
+       
+        if(x>15 && y>y1|| x<15 && y<y1){
             vx=-vx;
         }
-        if(x>raq2 || x<0){
+        if(x>15 && y>y2|| x<15 && y<y2){
             vx=-vx;
         }
         x=x+vx;
