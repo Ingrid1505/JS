@@ -27,18 +27,20 @@
         
        document.addEventListener("keydown", function(event) {
         if(event.key == "ArrowDown") {
-            console.log(event)
-            y1=y1+50;
-            y2=y2+50;
-
+            
+            if (y1+150+50<=canvas.height){
+                y1=y1+50;
+                y2=y2+50;
+            }
         } else if (event.key == "ArrowUp"){
-            console.log(event)
-            y1=y1-50;
-            y2=y2-50;
+          
+                y1=y1-50;
+                y2=y2-50;
+            
         }
 
        })
-   
+    
         function draw() {
         
         //permet de supprimer les éléments existants dans le canvas
